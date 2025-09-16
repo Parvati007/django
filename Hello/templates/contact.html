@@ -7,7 +7,7 @@
 </div>
 <div class="container mb-3 py-4">    
         <h1 class="text-center">Contact Us</h1>
-        <form method="post" actions="/contact">
+        <form method="post" action="/contact">
         {% csrf_token %}
         <div class="mb-3">
         <label for="name" class="form-label">Name</label>
@@ -16,7 +16,7 @@
 
         <div class="mb-3">
         <label for="email" class="form-label">Email Address</label>
-        <input type="email" class="form-control" id="name" name="email" placeholder="Enter your Email">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email Address">
         </div>
 
         <div class="mb-3">
@@ -29,7 +29,7 @@
         <textarea class="form-control" id="desc" name="desc"rows="3"></textarea>
         </div>
         <div class="d-flex justify-content-center">
-              <button type="button" class="btn btn-dark">Submit</button>
+              <button type="submit" class="btn btn-dark">Submit</button>
         </div>
         </form>
 </div>
