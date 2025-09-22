@@ -3,13 +3,12 @@ from datetime import datetime
 from home.models import Contact
 from django.contrib import messages
 
-# Create your views here.
+
 def index(request):
     context ={
         "variable1" : "parvati",
         "variable2" : "lakshmi"
     }
-    
     return render(request, 'index.html', context)
 
 def about(request):
