@@ -1,0 +1,45 @@
+/* Animate on scroll */
+.category-card, .product-card, .offer-banner {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover, .product-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Featured Category Cards */
+.category-card {
+  border: 2px solid #6B8E23;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.category-card h4 {
+  margin-top: 15px;
+  color: #556B2F;
+}
+
+/* Product Cards */
+.product-card img {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Offer Banner */
+.offer-banner {
+  background: linear-gradient(135deg, #556B2F, #6B8E23);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 12px;
+}
+.offer-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer a:hover {
+  text-decoration: underline;
+}

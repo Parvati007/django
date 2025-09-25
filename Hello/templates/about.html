@@ -4,6 +4,85 @@
 {% block body %}
 <div class="about-section">
   <div class="container text-center">
+    <!-- Logo -->
+    <img src="/static/img/logo.png" alt="Olive Edge Logo" class="about-logo">
+    <h1 class="about-title">About Olive Edge</h1>
+    <p class="about-tagline">Designed for the Brave, Styled for You</p>
+    <hr class="about-divider">
+
+    <!-- About Content -->
+    <div class="about-content">
+      <p>
+        At <strong>Olive Edge</strong>, we blend elegance, strength, and comfort into every piece.  
+        Inspired by the courage of the brave, our fashion line reflects confidence, pride,  
+        and timeless style.  
+      </p>
+      <p>
+        Our vision is to empower individuals to <em>Lead with Style</em> and  
+        <em>March with Pride</em> — whether in everyday life or special moments.
+      </p>
+    </div>
+
+    <!-- Value Cards -->
+    <div class="about-values row">
+      <div class="col-md-4">
+        <div class="value-card">
+          <h3>Sustainability</h3>
+          <p>We believe in fashion that respects nature while enhancing your lifestyle.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="value-card">
+          <h3>Strength</h3>
+          <p>Inspired by resilience and boldness, our designs carry a story of bravery.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="value-card">
+          <h3>Style</h3>
+          <p>Where modern elegance meets comfort — every detail reflects sophistication.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------------- Gallery Section ------------------- -->
+  <!-- ===== Featured Categories ===== -->
+<div class="container my-5 text-center">
+  <h2 class="mb-4 animate__animated animate__fadeInUp">Inspiration Gallery</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="category-card animate__animated animate__zoomIn">
+        <img src="/static/img/h9.jpg" class="img-fluid rounded" alt="Men Shirt">
+        <h4>The soldier’s strength lies not in his weapon, but in his will.</h4>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="category-card animate__animated animate__zoomIn">
+        <img src="/static/img/h10.jpg" class="img-fluid rounded" alt="Women Dress">
+        <h4>Discipline is the bridge between goals and victory.</h4>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="category-card animate__animated animate__zoomIn">
+        <img src="/static/img/55.jpg" class="img-fluid rounded" alt="Accessories">
+        <h4>For the love of country, they accept death.</h4>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- ------------------------------------------------------- -->
+
+  </div>
+</div>
+{% endblock body %}
+
+
+{% comment %} {% extends "base.html" %}
+{% block title %}About Us{% endblock title %}
+
+{% block body %}
+<div class="about-section">
+  <div class="container text-center">
     <img src="/static/img/logo.png" alt="Olive Edge Logo" class="about-logo">
     <h1 class="about-title">About Olive Edge</h1>
     <p class="about-tagline">Designed for the Brave, Styled for You</p>
@@ -43,4 +122,4 @@
     </div>
   </div>
 </div>
-{% endblock body %}
+{% endblock body %} {% endcomment %}

@@ -6,74 +6,104 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css" integrity="sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/static/css/home.css">
 
     <title>{% block title %}{% endblock title %} | Olive Edge</title>
   </head>
   <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fs-5">
-  <div class="container-fluid">
-  <a class="navbar-brand d-flex align-items-center" href="#">
-  <img src="/static/img/logo.png" 
-       alt="Logo" 
-       width="60" 
-       height="50" 
-       class="d-inline-block align-text-top rounded-circle m-2">
-  <span class="fst-italic text-white">Olive Edge</span>
-  </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About Us</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Services
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/services">Frontend developer</a></li>
-            <li><a class="dropdown-item" href="/services">Backend developer</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-          <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact Us</a>
-        </li>
-        
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        
-        <button class="btn btn-outline-success me-3" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-
-{% if messages %}
-{% for message in messages %}
-<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
-  <strong>{{ message }}</strong>
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-{% endfor %}
-{% endif %}
-{% block body %}{% endblock body %}
     
+    <!-- ------------------- Navbar ------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fs-5">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="/static/img/logo.png" alt="Logo" width="60" height="50" class="d-inline-block align-text-top rounded-circle m-2">
+          <span class="fst-italic text-white">Olive Edge</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/services">Frontend developer</a></li>
+                <li><a class="dropdown-item" href="/services">Backend developer</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn btn-outline-success me-3" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- ------------------- Messages ------------------- -->
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+          <strong>{{ message }}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <!-- ------------------- Body Content ------------------- -->
+    {% block body %}{% endblock body %}
+
+    <!-- ------------------- Footer ------------------- -->
+    <footer class="bg-dark text-light text-center text-lg-start mt-5">
+      <div class="container p-4">
+        <div class="row">
+          
+          <!-- Brand & About -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h5 class="text-uppercase fw-bold text-success">Olive Edge</h5>
+            <p>
+              Designed for the Brave, Styled for You.  
+              Fashion that reflects confidence, pride, and timeless elegance.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h5 class="text-uppercase fw-bold text-success">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="/" class="text-light text-decoration-none">Home</a></li>
+              <li><a href="/about" class="text-light text-decoration-none">About Us</a></li>
+              <li><a href="/services" class="text-light text-decoration-none">Services</a></li>
+              <li><a href="/contact" class="text-light text-decoration-none">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-4 col-md-12 mb-4">
+            <h5 class="text-uppercase fw-bold text-success">Contact</h5>
+            <p>Email: support@oliveedge.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Location: New Delhi, India</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center p-3 border-top" style="background: #111;">
+        © 2025 Olive Edge | All Rights Reserved
+      </div>
+    </footer>
+
+    <!-- ------------------- Scripts ------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>
