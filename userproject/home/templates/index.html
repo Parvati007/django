@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Logged In User</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ✅ Custom CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;   /* Increased from 2rem */
+      margin-bottom: 15px;
+      animation: fadeInDown 1s ease;
+    }
+
+    p {
+      font-size: 1.5rem;   /* Increased from 1.1rem */
+      margin-bottom: 30px;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    a {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #fff;
+      color: #2575fc;
+      font-size: 1.2rem;   /* Larger button text */
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background: #2575fc;
+      color: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome {{ request.user }}</h1>
+  <p>Welcome to the TechWorld Website!</p>
+  <a href="/logout">Logout</a>
+</body>
+</html>
+
