@@ -1,0 +1,124 @@
+/* ------------------- General Section ------------------- */
+.about-section {
+  background: linear-gradient(135deg, #F5F5DC, #e6e6d1); /* soft beige gradient */
+  padding: 80px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-logo {
+  height: 130px;
+  margin-bottom: 25px;
+  animation: zoomIn 1.2s ease-in-out;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #556B2F; /* dark olive */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideDown 1s ease-in-out;
+}
+
+.about-tagline {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #6B8E23; /* olive drab */
+  margin-bottom: 20px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.about-divider {
+  width: 120px;
+  margin: 20px auto 40px;
+  border: 3px solid #556B2F;
+  border-radius: 10px;
+  animation: expandWidth 1.2s ease-in-out;
+}
+
+/* ------------------- Content ------------------- */
+.about-content {
+  max-width: 850px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #222;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-content p:hover {
+  transform: scale(1.02);
+  color: #556B2F;
+}
+
+/* ------------------- Value Cards ------------------- */
+.about-values {
+  margin-top: 50px;
+}
+
+.value-card {
+  background: #ffffff;
+  border: 2px solid #6B8E23;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 15px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.value-card h3 {
+  color: #556B2F;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  color: #333;
+  font-size: 1rem;
+}
+
+.value-card:hover {
+  background: linear-gradient(135deg, #6B8E23, #556B2F);
+  color: #fff;
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.value-card:hover h3,
+.value-card:hover p {
+  color: #fff;
+}
+
+/* ------------------- Animations ------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes expandWidth {
+  from { width: 0; opacity: 0; }
+  to { width: 120px; opacity: 1; }
+}
+
