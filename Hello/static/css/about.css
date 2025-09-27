@@ -1,5 +1,5 @@
 .about-section {
-  background: linear-gradient(135deg, #F5F5DC, #e6e6d1); /* soft beige gradient */
+  background: linear-gradient(135deg, #F5F5DC, #e6e6d1); 
   padding: 80px 20px;
   text-align: center;
   animation: fadeIn 1.5s ease-in-out;
@@ -14,7 +14,7 @@
 .about-title {
   font-size: 2.8rem;
   font-weight: bold;
-  color: #556B2F; /* dark olive */
+  color: #556B2F; 
   text-transform: uppercase;
   letter-spacing: 2px;
   animation: slideDown 1s ease-in-out;
@@ -23,7 +23,7 @@
 .about-tagline {
   font-size: 1.3rem;
   font-style: italic;
-  color: #6B8E23; /* olive drab */
+  color: #6B8E23; 
   margin-bottom: 20px;
   animation: fadeInUp 1.5s ease-in-out;
 }
@@ -96,7 +96,6 @@
 }
 
 /* ------------------- Gallery Section ------------------- */
-/* Animate on scroll */
 .category-card, .product-card, .offer-banner {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -106,7 +105,6 @@
   box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
-/* Featured Category Cards */
 .category-card {
   border: 2px solid #6B8E23;
   border-radius: 15px;

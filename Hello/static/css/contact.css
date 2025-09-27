@@ -1,4 +1,4 @@
-/* Contact Page Styling */
+
 .contact-form-container {
     max-width: 700px;
     margin: auto;
@@ -6,7 +6,7 @@
 
 .contact-form-container h1 {
     font-weight: bold;
-    color: #198754; /* Bootstrap green */
+    color: #198754; 
 }
 
 .custom-input {
@@ -32,7 +32,6 @@ button.btn-success:hover {
     background-color: #157347;
 }
 
-/* Small screens */
 @media (max-width: 768px) {
     .contact-form-container {
         padding: 0 15px;
