@@ -3,34 +3,38 @@
 
 {% block body %}
 <div class="container-fluid px-0 mb-3">
-    <img src="/static/img/contact.png" height="400px" class="d-block w-100 mx-0"alt="..."/>
+    <img src="/static/img/contact.png" height="400px" class="d-block w-100 mx-0" alt="Contact Banner"/>
 </div>
-<div class="container mb-3 py-4">    
-        <h1 class="text-center">Contact Us</h1>
-        <form method="post" action="/contact">
+
+<div class="container mb-5 py-4 contact-form-container">
+    <h1 class="text-center mb-4 animate__animated animate__fadeInDown">Get in Touch</h1>
+    <p class="text-center text-muted mb-5">We’d love to hear from you! Please fill out the form below.</p>
+
+    <form method="post" action="/contact" class="shadow p-4 rounded bg-white">
         {% csrf_token %}
         <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+            <label for="name" class="form-label fw-semibold">Full Name</label>
+            <input type="text" class="form-control custom-input" id="name" name="name" placeholder="Enter your Name">
         </div>
 
         <div class="mb-3">
-        <label for="email" class="form-label">Email Address</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email Address">
+            <label for="email" class="form-label fw-semibold">Email Address</label>
+            <input type="email" class="form-control custom-input" id="email" name="email" placeholder="Enter your Email">
         </div>
 
         <div class="mb-3">
-        <label for="phone" class="form-label">Phone Number</label>
-        <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number">
+            <label for="phone" class="form-label fw-semibold">Phone Number</label>
+            <input type="tel" class="form-control custom-input" id="phone" name="phone" placeholder="Enter your Phone Number">
         </div>
 
         <div class="mb-3">
-        <label for="desc" class="form-label">Provide your Valuable Feedback</label>
-        <textarea class="form-control" id="desc" name="desc"rows="3"></textarea>
+            <label for="desc" class="form-label fw-semibold">Your Message</label>
+            <textarea class="form-control custom-input" id="desc" name="desc" rows="4" placeholder="Write your feedback here..."></textarea>
         </div>
+
         <div class="d-flex justify-content-center">
-              <button type="submit" class="btn btn-dark">Submit</button>
+            <button type="submit" class="btn btn-success px-5 py-2 shadow-sm">Submit</button>
         </div>
-        </form>
+    </form>
 </div>
 {% endblock body %}

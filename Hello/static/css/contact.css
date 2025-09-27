@@ -1,0 +1,40 @@
+/* Contact Page Styling */
+.contact-form-container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-form-container h1 {
+    font-weight: bold;
+    color: #198754; /* Bootstrap green */
+}
+
+.custom-input {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+    border-color: #198754;
+    box-shadow: 0 0 8px rgba(25, 135, 84, 0.3);
+}
+
+button.btn-success {
+    border-radius: 30px;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button.btn-success:hover {
+    transform: translateY(-2px);
+    background-color: #157347;
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+    .contact-form-container {
+        padding: 0 15px;
+    }
+}
